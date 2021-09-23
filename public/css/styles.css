@@ -1,0 +1,7 @@
+.ensfLogin {
+	min-height: 14rem;
+}
+
+.ensfError:last-child {
+    margin-bottom: 2rem;
+}

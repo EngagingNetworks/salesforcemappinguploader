@@ -1,0 +1,21 @@
+{{> header}}
+	<p class="text-muted">Session token:</br>{{ token }}</p>
+	<h5>Current mappings</h5>
+	<ul class="list-group mb-4">
+	{{#currentMappings}}
+		<li class="list-group-item">{{ Id }} : {{Name}}</li>
+	{{/currentMappings}}
+	</ul>
+	<h5>Data files</h5>
+	<ul class="list-group">
+	{{#dataFiles}}
+		<li class="list-group-item d-flex">
+			<p class="flex-grow-1">{{ . }}</p>
+			<a
+				class="btn btn-primary"
+				href="/upload?file={{ . }}"
+			>Upload</a>
+		</li>
+	{{/dataFiles}}
+	</ul>
+{{> footer}}

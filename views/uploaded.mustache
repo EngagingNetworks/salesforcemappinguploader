@@ -1,0 +1,24 @@
+{{> header}}
+	<h3>Results</h3>
+	<dl class="row">
+		<dt class="col-sm-3">Uploaded file:</dt>
+		<dd class="col-sm-9">{{ fileName }}</dd>
+	</dl>
+	<ul class="list-group">
+	{{#errors}}
+		<li class="list-group-item list-group-item-danger ensfError">
+			{{ . }}
+		</li>
+	{{/errors}}
+	</ul>
+	<h4>Output</h4>
+	<code>
+		{{ output }}
+	</code>
+	<p>
+		<a
+			class="btn btn-secondary mt-4"
+			href="/list"
+		>Back to list</a>
+	</p>
+{{> footer}}

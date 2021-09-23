@@ -1,0 +1,94 @@
+[
+	{
+		"objectType": "Mapping_Rule__c",
+		"data": {
+			"Name": "IU mapping template 1",
+			"Active__c": false,
+			"Batch_Size__c": 100,
+			"Description__c": "Testing creating mapping rules via API 1",
+			"Filter_Logic__c": "Test filter logic",
+			"Mark_As_Processed__c": false,
+			"Object__c": "Opportunity",
+			"Running_Order__c": 4,
+			"SF_Field_Id__c": "Test sf field ID",
+			"Staging_Field_To_Update__c": "Test staging field to update",
+			"Update_Reference_Id__c": "Test update ref id"
+		},
+		"children": [
+			{
+				"objectType": "Mapping_Query_Filter_Item__c",
+				"data": {
+					"Comparison_Operator__c": "=",
+					"Staging_Field_Name__c": "IUfield1",
+					"Staging_Value__c": "IUvalue1",
+					"Filter_Index__c": 5
+				}
+			},
+			{
+				"objectType": "Mapping_Query_Filter_Item__c",
+				"data": {
+					"Comparison_Operator__c": ">",
+					"Staging_Field_Name__c": "IUfield2",
+					"Staging_Value__c": "IUvalue2",
+					"Filter_Index__c": 7
+				}
+			},
+			{
+				"objectType": "Mapping_Item__c",
+				"data": {
+					"Staging_Field_Name__c": "IUfield3",
+					"Default_Value__c": "IUfield3default",
+					"Object_Field_Name__c": "IUSFField3"
+				}
+			},			
+			{
+				"objectType": "Mapping_Item__c",
+				"data": {
+					"Staging_Field_Name__c": "IUfield3",
+					"Default_Value__c": "IUfield3default",
+					"Object_Field_Name__c": "IUSFField3"
+				}
+			},
+			{
+				"objectType": "Mapping_Decode_Value_Item__c",
+				"data": {
+					"Object_Field_Name__c": "IUSFField5",
+					"Value__c": "IUnewvalue1",
+					"Value_To_Replace__c": "IUoldvalue1"
+				}
+			},
+			{
+				"objectType": "Mapping_Decode_Value_Item__c",
+				"data": {
+					"Object_Field_Name__c": "IUSFField6",
+					"Value__c": "IUnewvalue2",
+					"Value_To_Replace__c": "IUoldvalue2"
+				}
+			},
+			{
+				"objectType": "Matching_Rule__c",
+				"data": {
+					"Description__c": "This is a matching rule from IU 1",
+					"Object__c": "Opportunity",
+					"ENSR_Field_To_Update__c": "IUField5",
+					"Multiple_Results_Action__c": "SelectFirst",
+					"No_Results_Action__c": "ContinueWithoutError",
+					"Sort_Order__c": "Ascending",
+					"Sort_By__c": "IUSFField5"
+				},
+				"children": [
+					{
+						"objectType": "Matching_Query_Filter_Item__c",
+						"data": {
+							"Object_Field_Name__c": "IUSFField7",
+							"Object_Value__c": "IU SF object value 7",
+							"Value_Type__c": "ENSRField",
+							"Comparison_Operator__c": "=",
+							"Filter_Index__c": 27
+						}
+					}
+				]
+			}
+		]
+	}
+]
