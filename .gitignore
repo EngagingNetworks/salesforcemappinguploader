@@ -101,8 +101,7 @@ dist
 .dynamodb/
 
 # TernJS port file
-<<<<<<< HEAD
 .tern-port
-=======
-.tern-port
->>>>>>> 319762add5f2611730b70c80025b685caee21f8f
+
+## IU custom
+.env
