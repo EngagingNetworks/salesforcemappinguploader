@@ -9,7 +9,7 @@ A node-based server that can push JSON-defined objects to Salesforce, using oaut
 2. Place this folder somewhere convenient
 3. Navigate to this folder in the terminal
 4. Run `npm install`. This will install all the required packages for the application
-5. Client key, client secret and callback URL are stored in the file .env. Copy the supplied `.example.env` file as `.env` and enter your own Salesforce detais.
+5. Client key, client secret and callback URL are stored in the file `.env`. Copy the supplied `.example.env` file as `.env` and enter your own Salesforce details.
 
 ## SSL certificate
 Salesforce requires the page to run under HTTPS. I used as self-certified SSL certificate to generate my `key.pem` and `cert.pem` files. [This link](https://web.archive.org/web/20120203022122/http://www.silassewell.com/blog/2010/06/03/node-js-https-ssl-server-example/) was helpful in generating them using OpenSSL in linux. You may be able to just use mine. Your browser will complain either way - they don't like self-signed SSL.
